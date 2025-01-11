@@ -1,0 +1,65 @@
+/* General font styling */
+p, li {
+    font-size: 20px;
+    font-weight: 520;
+    line-height: 1.5;
+}
+
+/* Both of the titles*/
+.titles{
+    text-align: center;
+    letter-spacing: 3.5px;
+    line-height: 1.5;
+}
+
+/* Top title */
+h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 40px;   
+}
+
+/* Lower, blue title */
+h2 {
+    color: #006EB6;
+    border-bottom: lightgray 1px solid;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+
+body {
+    margin: 0 auto;
+    max-width: fit-content;
+    display: block;
+}
+
+/* Adds a margin to the outside border */
+.content {
+    padding-left: 135px;
+    padding-right: 135px;
+    border: rgba(0, 0, 0, 0.224) 1px solid;
+    height: 100%;
+    margin: 35px;
+}
+
+/* Elements inside content */
+.content *{
+    max-width: 600px;
+}
+
+/* List items */
+li {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+}
