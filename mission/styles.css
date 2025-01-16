@@ -15,7 +15,8 @@ p, li {
 h1 {
     margin-top: 50px;
     margin-bottom: 0;
-    font-size: 40px;   
+    font-size: 40px; 
+    line-height: 1.5;  
 }
 
 h2 {
@@ -23,6 +24,7 @@ h2 {
     border-bottom: lightgray 1px solid;
     margin-bottom: 50px;
     font-size: 18px;
+    line-height: 1.5;
 }
 
 
@@ -62,4 +64,15 @@ footer img {
     height: auto;
     margin: 0 auto;
     padding: 30px;
+}
+
+
+/* Dark theme styling */
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark h2 {
+    color: #4db8ff
 }
