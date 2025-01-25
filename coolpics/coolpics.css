@@ -1,0 +1,125 @@
+/* Google fonts import*/
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+
+/* CSS Variables*/
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+    }
+
+
+/* General styling*/
+header {
+    background: var(--primary-color);
+    padding: 0.5rem 0;
+    color: white
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+body {
+    background: white;
+    font-family: var(--secondary-font);
+    margin: 0;
+    line-height: 1.6;
+}
+.gallery {
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.menu-button{
+    all: unset; 
+    font-size: 2em;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-options{
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.menu-options.show{
+    display: block;
+}
+
+.menu-options a{
+    color: white;
+    margin-bottom: .5rem;
+    padding-inline: 3.5rem;
+}
+
+footer {
+    background: rgb(108, 206, 255);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9em;
+}
+
+img {
+    margin: 1rem;
+    border: 8px solid white;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Medium screens, between 700 and 1000px*/
+@media (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+/* Larger screen, with a width of 1000px or more*/
+@media (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .menu-button {
+        visibility: hidden;
+    }
+
+    .menu-options {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
