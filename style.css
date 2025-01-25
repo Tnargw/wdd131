@@ -1,0 +1,80 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora&display=swap');
+
+/* Root Variables */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #757e7e;
+    --background-color: #fefefe;
+    --text-color: #333;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background: var(--background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+main p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+a:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
