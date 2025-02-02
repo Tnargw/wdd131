@@ -1,5 +1,5 @@
 /* Google fonts import*/
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Inter:wght@500&family=Mooli&family=Nunito&family=Oswald:wght@200;400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* CSS Variables*/
 :root {
@@ -102,16 +102,15 @@ figure {
 .viewer {
     position: fixed;
     top: 0;
-    bottom: 0;
-    left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    
+    left: 0;
+    bottom: 0;
     display: grid;
     grid-template-rows: auto auto; 
     justify-content: center;
-    align-items: center;
     padding: 2rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
     
 }
 
@@ -121,8 +120,9 @@ figure {
     border: none;
     color: white;
     cursor: pointer;
-    align-self: end;
+    align-self: flex-end;
     justify-self: end;
+    margin-right: 0.5rem;
 }
 
 .viewer img{
@@ -139,7 +139,6 @@ footer {
 
 img {
     margin: 1rem;
-    border: 8px solid white;
     object-fit: cover;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
@@ -184,7 +183,7 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2.5rem;
+        padding: 2rem;
     }
 
     .viewer img{
