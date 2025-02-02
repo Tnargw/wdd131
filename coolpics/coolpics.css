@@ -39,9 +39,21 @@ body {
     margin: 0;
     line-height: 1.6;
 }
+
+/* Gallery styling */
 .gallery {
     gap: 1.25rem;
     justify-content: center;
+}
+
+.gallery img{
+    margin: 1.5em;
+    border: 10px solid white;
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 1);
 }
 
 ul {
@@ -64,21 +76,58 @@ figure {
     cursor: pointer;
 }
 
-.menu-options{
-    display: none;
-    list-style-type: none;
+
+.menu{
+    display: flex;
+    flex-direction: row;
     text-align: center;
     font-size: 1.5em;
 }
 
-.menu-options.show{
+.menu.show{
     display: block;
 }
 
-.menu-options a{
+.menu a{
     color: white;
     margin-bottom: .5rem;
     padding-inline: 3.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* Viewer Styles */
+.viewer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+    display: grid;
+    grid-template-rows: auto auto; 
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+.close-viewer{
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: end;
+    justify-self: end;
+}
+
+.viewer img{
+    max-height: 80%;
+    max-width: 80%;
 }
 
 footer {
@@ -91,8 +140,6 @@ footer {
 img {
     margin: 1rem;
     border: 8px solid white;
-    width: 240px;
-    height: 240px;
     object-fit: cover;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
@@ -118,9 +165,29 @@ img {
         visibility: hidden;
     }
 
-    .menu-options {
+    .menu {
         display: flex;
         justify-content: center;
         gap: 1rem;
+    }
+
+    .menu li{
+        display: inline;
+    }
+
+    .viewer {
+        width: fit-content;
+        height: fit-content;
+        max-height: 80vh; 
+        max-width: 80vw;
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem;
+    }
+
+    .viewer img{
+        max-width: 80vh;
     }
 }
