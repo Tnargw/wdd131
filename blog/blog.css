@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #473144; /* Dark color from assignment page */
+    --secondary-color: #AF1B3F; /* Red color from assignment page */
+    --accent-color: #EFC69B; /* Gold color from assignment page */
+    --primary-font: Helvetica, Arial, sans-serif;
+    --secondary-font: Lora, Impact, Serif;
+}
+
+
+/* Styling for the header */
+header {
+    text-align: center;
+}
+
+/* Global styling */
+body {
+    font-family: var(--primary-font);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+h1 {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+/* Styling for the main nav bar */
+nav {
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: 7rem 7rem 7rem;
+    list-style-type: none;
+    justify-content: right;
+    gap: 0.5rem;
+    padding: 0.2rem;
+}
+
+.main-nav li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Styling for the main site content */ 
+#site-content {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 0;
+}
+
+
+/* Styling for the books */
+.book {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.book-content p {
+    color: var(--primary-color)
+}
+
+
+.book-title{
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.book-details {
+    color: var(--primary-color);
+    text-align: left;
+}
+
+img {
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.link-to-read-more {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+
+/* Accessible 'Skip to Content' link */
+.skiptocontent a {
+    position: absolute;
+    top: -40px; 
+    left: 0;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 5px;
+    outline: 2px solid var(--secondary-color); 
+}
+
+/* Move it back on when focused */
+.skiptocontent a:focus {
+    top: 0;
+}
