@@ -12,6 +12,10 @@ header {
     text-align: center;
 }
 
+main {
+    width: 95%;
+}
+
 /* Global styling */
 body {
     font-family: var(--primary-font);
@@ -36,7 +40,7 @@ nav {
     display: grid;
     grid-template-columns: 7rem 7rem 7rem;
     list-style-type: none;
-    justify-content: right;
+    justify-content: end;
     gap: 0.5rem;
     padding: 0.2rem;
 }
@@ -59,26 +63,48 @@ nav {
 .book {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
 }
 
 .book-content p {
-    color: var(--primary-color)
+    color: var(--primary-color);
+    margin: 2rem auto;
+    align-content: center;
+}
+
+.book-content img {
+    display: block;
+    margin: 0 auto;
 }
 
 
 .book-title{
     color: var(--secondary-color);
-    margin: 0;
+    margin-top: 0.5rem;
 }
 
 .book-details {
     color: var(--primary-color);
-    text-align: left;
+    text-align: right;
+    border-right: 2px solid var(--accent-color);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+
 }
 
-img {
-    padding-left: 2rem;
-    margin-top: 1rem;
+.book-details p {
+    line-height: 1.2;
+    margin: 0.5rem;
+}
+
+.book-date {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .link-to-read-more {
@@ -105,4 +131,18 @@ img {
 /* Move it back on when focused */
 .skiptocontent a:focus {
     top: 0;
+}
+
+
+/* Styling for the filters */
+.filters {
+    width: 100%;
+    max-width: 80%;
+    border: 2px solid var(--accent-color);
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.filters p {
+    margin: 0;
 }

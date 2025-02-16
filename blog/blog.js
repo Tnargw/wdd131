@@ -23,5 +23,50 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
-	}
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
+		}
 ]
+
+const bookSection = document.querySelector(".book");
+
+// Function to generate book HTML from above articles
+function createBookHTML(article) {
+    return `
+        <article class="book-details">
+            <p class="book-date">${article.date}</p>
+            <p>${article.ages}</p>
+            <p>${article.genre}</p>
+            <p>${article.stars}</p>
+        </article>
+        <article class="book-content">
+            <h2 class="book-title">${article.title}</h2>
+            <img src="${article.imgSrc}" alt="${article.imgAlt}" width="250" height="337">
+            <p>
+                ${article.description}
+                <a href="#" class="link-to-read-more">Read More...</a>
+            </p>
+        </article>
+    `;
+}
+
+// Function to add the books to the page
+function displayBooks(articles) {
+    articles.forEach(article => {
+        bookSection.insertAdjacentHTML("beforeend", createBookHTML(article));
+    });
+}
+
+// Call displayBooks on page load to display all books in articles
+displayBooks(articles);
