@@ -3,8 +3,8 @@
 // Generates a message with the name of the person registering, number of participants, and fee
 export function successTemplate(info) {
     return `
-        <p>Thank you ${info.name} for registering.</p>
-        <p>You have registered ${info.participants} participants and owe $${info.fee} in Fees.</p>
+        <p>Thank you ${info.name} for registering. You have registered ${info.participants} 
+        participants and owe $${info.fee} in Fees.</p>
     `;
 }
 
