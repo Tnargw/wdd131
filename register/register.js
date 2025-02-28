@@ -32,11 +32,10 @@ function totalFees() {
 
     feeElements = [...feeElements];
 
-    let total = 0;
-
-    feeElements.forEach(element => {
-        total += parseFloat(element.value); 
-    });
+    let total = feeElements.reduce((sum, element) => {
+        return sum + parseFloat(element.value);
+    }, 0);
+    
     
     return total;
 }
