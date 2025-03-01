@@ -1,37 +1,29 @@
 // templates.js
 
-// Generates a message with the name of the person registering, number of participants, and fee
-export function successTemplate(info) {
+// Generates the HTML structure for a new participant section, using the participantNumber for unique IDs
+export function participantTemplate(participantNumber) {
     return `
-        <p>Thank you ${info.name} for registering. You have registered ${info.participants} 
-        participants and owe $${info.fee} in Fees.</p>
-    `;
-}
-
-// Generates the HTML structure for a new participant section, using the count for unique IDs
-export function participantTemplate(count) {
-    return `
-    <section class="participant${count}">
-        <p>Participant ${count}</p>
+    <section class="participant${participantNumber}">
+        <p>Participant ${participantNumber}</p>
         <div class="item">
-            <label for="fname${count}"> First Name<span>*</span></label>
-            <input id="fname${count}" type="text" name="fname" value="" required />
+            <label for="fname${participantNumber}"> First Name<span>*</span></label>
+            <input id="fname${participantNumber}" type="text" name="fname" value="" required />
         </div>
         <div class="item activities">
-            <label for="activity${count}">Activity #<span>*</span></label>
-            <input id="activity${count}" type="text" name="activity" />
+            <label for="activity${participantNumber}">Activity #<span>*</span></label>
+            <input id="activity${participantNumber}" type="text" name="activity" />
         </div>
         <div class="item">
-            <label for="fee${count}">Fee ($)<span>*</span></label>
-            <input id="fee${count}" type="number" name="fee" />
+            <label for="fee${participantNumber}">Fee ($)<span>*</span></label>
+            <input id="fee${participantNumber}" type="number" name="fee" />
         </div>
         <div class="item">
-            <label for="date${count}">Desired Date <span>*</span></label>
-            <input id="date${count}" type="date" name="date" />
+            <label for="date${participantNumber}">Desired Date <span>*</span></label>
+            <input id="date${participantNumber}" type="date" name="date" />
         </div>
         <div class="item">
-            <label for="grade${count}">Grade<span>*</span></label>
-            <select id="grade${count}" name="grade">
+            <label for="grade${participantNumber}">Grade<span>*</span></label>
+            <select id="grade${participantNumber}" name="grade">
             <option selected value="" disabled selected></option>
             <option value="1">1st</option>
             <option value="2">2nd</option>
@@ -48,4 +40,12 @@ export function participantTemplate(count) {
             </select>
         </div>
     </section>`;
+}
+
+// Generates a message with the name of the person registering, number of participants, and fee
+export function successTemplate(info) {
+    return `
+        <p>Thank you ${info.name} for registering. 
+        You have registered ${info.participants} participants and owe $${info.fee} in Fees.</p>
+    `;
 }
