@@ -93,27 +93,23 @@ main {
     padding: 1.4rem;
 }
 
+.recipe-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+
 .recipe-card {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     border: 2px solid #111;
     border-radius: 6px;
     padding: 1.6rem;
-}
-
-.recipe-image {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
-
-.recipe-card {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    gap: 0.4rem;
 }
 
 .recipe-card li {
@@ -165,7 +161,13 @@ footer a:hover {
 @media (min-width: 600px) {
     .recipe-card {
         flex-direction: row;
+        align-items: flex-start;
         gap: 1.2rem;
+    }
+
+    .recipe-image {
+        width: 40%;
+        max-width: 300px;
     }
 
     footer {
