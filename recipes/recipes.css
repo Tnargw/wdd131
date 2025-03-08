@@ -103,7 +103,7 @@ main {
 }
 
 .recipe-image img {
-    max-width: 540px;
+    max-width: 100%;
     width: auto;
     height: auto;
 }
@@ -165,7 +165,7 @@ footer a:hover {
 @media (min-width: 600px) {
     .recipe-card {
         flex-direction: row;
-        gap: 1.1rem;
+        gap: 1.2rem;
     }
 
     footer {
