@@ -114,19 +114,19 @@ main {
 }
 
 .recipe-tags {
+    display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 0.4rem;
 }
 
 .recipe-tags li {
-    border: 1px solid #222;
-    padding: 6.5px;
+    border: 1px solid black;
+    padding: 7px;
     font-weight: 600;
     margin: 0;
+    font-size: 100%;
     list-style-type: none;
-    background-color: #f9f9f9;
 }
 
 /* Recipe Name */
