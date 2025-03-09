@@ -1,6 +1,6 @@
 // main.js
 
-// Hide / Show the recipe description
+// Hide and Show the recipe description
 const description = document.querySelector('.recipe-description');
 function handleResize() {
     if (window.innerWidth >= 600) {
@@ -12,5 +12,5 @@ function handleResize() {
 
 window.addEventListener("resize", handleResize);
 
-// Run once on page load to set initial state
+// Runs immediately when the page loads
 window.addEventListener("load", handleResize);
