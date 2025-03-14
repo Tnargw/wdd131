@@ -195,7 +195,7 @@ footer a:hover {
 }
 
 @media (min-width: 960px) {
-    main, footer {
+    header, main, footer {
         max-width: 1400px;
         margin: 0 auto;
     }
