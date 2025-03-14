@@ -110,6 +110,7 @@ main {
     border-radius: 6px;
     padding: 1.6rem;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .recipe-tags {
