@@ -7,7 +7,7 @@
     --secondary-font: 'Lora', serif;
 }
 
-body {
+body { 
     margin: 0;
     font-family: var(--primary-font);
     font-size: 20px;
@@ -54,20 +54,16 @@ header {
     border-radius: 6px;
     overflow: hidden;
     background: white;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto 1.5rem auto;
-    padding: 0 1.4rem;
-    box-sizing: border-box;
+    margin: 0 1.6rem 1.6rem;
 }
 
 #search-input {
-    flex: 1;
+    flex: 1; 
     padding: 9px;
     border: none;
     font-size: 1.35em;
-    outline: none;
-    background: transparent;
+    outline: none; 
+    background: transparent; 
 }
 
 #search-form button {
@@ -76,7 +72,7 @@ header {
     justify-content: center;
     padding: 6px;
     border: none;
-    border-left: 2px solid #111;
+    border-left: 2px solid #111; 
     background: none;
     cursor: pointer;
     width: 48px;
@@ -89,18 +85,16 @@ header {
 
 #search-form button img {
     width: 72%;
-    height: 72%;
+    height: 72%; 
     object-fit: contain;
 }
+
 
 main {
     padding: 1.4rem;
     min-height: 60vh;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
+
 
 .recipe-image {
     width: 100%;
@@ -111,6 +105,7 @@ main {
     object-fit: cover;
 }
 
+/* Recipe Card Styling */
 .recipe-card {
     display: flex;
     flex-direction: column;
@@ -148,6 +143,7 @@ main {
     margin-bottom: 1.1rem;
 }
 
+/* Footer */
 footer {
     display: flex;
     flex-direction: column;
@@ -155,13 +151,11 @@ footer {
     gap: 0.45rem;
     padding: 0 1.4rem;
     font-size: 17px;
-    width: 100%;
     max-width: 1400px;
     min-height: 120px;
     flex-shrink: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
+
 
 footer a {
     text-decoration: none;
@@ -170,9 +164,10 @@ footer a {
 
 footer a:hover {
     cursor: pointer;
-    color: #014d6f;
+    color: #014d6f; 
 }
 
+/* Social Links */
 .social-links img {
     width: 54px;
 }
@@ -181,6 +176,7 @@ footer a:hover {
     display: none;
 }
 
+/* Responsive Adjustments */
 @media (min-width: 600px) {
     .recipe-card {
         flex-direction: row;
@@ -195,5 +191,17 @@ footer a:hover {
     footer {
         flex-direction: row-reverse;
         justify-content: space-between;
+    }
+}
+
+@media (min-width: 960px) {
+    main, footer {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    #search-form {
+        max-width: 1400px;
+        margin: 0 auto 1.4rem auto;
     }
 }
