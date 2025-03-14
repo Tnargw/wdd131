@@ -195,13 +195,9 @@ footer a:hover {
 }
 
 @media (min-width: 960px) {
-    main, footer {
+    #search-form, main, footer {
         max-width: 1400px;
         margin: 0 auto;
     }
 
-    #search-form {
-        max-width: 1400px;
-        margin: 0 auto 1.4rem auto;
-    }
 }
