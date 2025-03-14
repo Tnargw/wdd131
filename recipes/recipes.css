@@ -7,15 +7,6 @@
     --secondary-font: 'Lora', serif;
 }
 
-/* Preload Google Fonts */
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('https://fonts.gstatic.com/s/opensans/v20/memvYaGs126MiZpBA-U1Ug.woff2') format('woff2');
-}
-
 body { 
     margin: 0;
     font-family: var(--primary-font);
@@ -211,6 +202,6 @@ footer a:hover {
 
     #search-form {
         max-width: 1400px;
-        margin: 0 auto 1.5rem auto;
+        margin: 0 auto 1.4rem auto;
     }
 }
