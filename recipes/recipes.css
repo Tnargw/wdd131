@@ -34,6 +34,7 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     border-bottom: 2.5px solid #d0d0d0;
+    padding: 1.4rem;
 }
 
 #header-container {
