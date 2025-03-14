@@ -95,7 +95,7 @@ main {
 
 .recipe-image {
     width: 100%;
-    max-width: 100%;
+    max-width: 600px;
     height: auto;
     display: block;
     margin-bottom: 1rem;
@@ -151,6 +151,8 @@ footer {
     padding: 0 1.4rem;
     font-size: 17px;
     max-width: 1400px;
+    min-height: 120px;
+    flex-shrink: 0;
 }
 
 footer a {
