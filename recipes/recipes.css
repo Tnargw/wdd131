@@ -55,6 +55,7 @@ header {
     overflow: hidden;
     background: white;
     margin: 0 1.6rem 1.6rem;
+    max-width: 1400px;
 }
 
 #search-input {
