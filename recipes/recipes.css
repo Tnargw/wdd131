@@ -7,6 +7,15 @@
     --secondary-font: 'Lora', serif;
 }
 
+/* Preload Google Fonts */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/opensans/v20/memvYaGs126MiZpBA-U1Ug.woff2') format('woff2');
+}
+
 body { 
     margin: 0;
     font-family: var(--primary-font);
@@ -22,12 +31,10 @@ p {
 }
 
 header {
-    max-width: 1400px; /* Same as main and footer */
-    margin: 0 auto; /* Centers the header */
-    padding: 1.4rem; /* Matches main padding */
+    max-width: 1400px;
+    margin: 0 auto;
     border-bottom: 2.5px solid #d0d0d0;
 }
-
 
 #header-container {
     display: flex;
@@ -90,17 +97,20 @@ header {
     object-fit: contain;
 }
 
+
 main {
     padding: 1.4rem;
+    min-height: 60vh;
 }
+
 
 .recipe-image {
     width: 100%;
     max-width: 600px;
-    height: auto;
+    height: 400px;
     display: block;
     margin-bottom: 1rem;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* Recipe Card Styling */
@@ -130,7 +140,6 @@ main {
     list-style-type: none;
 }
 
-/* Recipe Name */
 .recipe-name {
     font-family: var(--secondary-font);
     font-size: 2rem;
@@ -138,7 +147,6 @@ main {
     margin: 1rem 0 0 0;
 }
 
-/* Star Rating */
 .rating {
     margin-bottom: 1.1rem;
 }
@@ -155,6 +163,7 @@ footer {
     min-height: 120px;
     flex-shrink: 0;
 }
+
 
 footer a {
     text-decoration: none;
@@ -182,7 +191,6 @@ footer a:hover {
         align-items: flex-start;
         gap: 1.2rem;
     }
-    
 
     .recipe-image {
         width: 40%;
@@ -200,7 +208,6 @@ footer a:hover {
         margin: 0 auto;
     }
 
-    
     #search-form {
         max-width: 1400px;
         margin: 0 auto 1.5rem auto;
