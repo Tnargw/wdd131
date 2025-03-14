@@ -50,7 +50,7 @@ function renderRecipes(recipeList) {
 
 // handleResize function
 function handleResize() {
-    const description = document.querySelector('.recipe-description');
+    const description = document.querySelectorAll('.recipe-description');
     if (description) {
         if (window.innerWidth >= 600) {
             description.classList.remove('hide');
