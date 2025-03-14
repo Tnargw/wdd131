@@ -1,20 +1,30 @@
 // main.js
 import recipes from './recipes.mjs';
 
-function random(num) {
-    return Math.floor(Math.random() * num);
+
+
+// Returns a random integer from 0 to num-1
+function random(number) {
+    return Math.floor(Math.random() * number);
 }
 
-function getRandomListEntry(list) {
+
+// Selects a random entry from the array of recipes
+function getRandomRecipe(list) {
     return list[random(list.length)];
 }
 
+
+// Template functions
+
+// Generates the HTML for a recipe card
 function recipeTemplate(recipe) {
-    return `<section class="recipe-card"> 
+    return `
+    <section class="recipe-card"> 
         <img class="recipe-image" src="${recipe.image}" alt="Image of ${recipe.name}" />
         <div class="recipe-content">
             <ul class="recipe-tags">
-                ${tagsTemplate(recipe.tags)}
+                ${tagTemplate(recipe.tags)}
             </ul>
             <h2 class="recipe-name">${recipe.name}</h2>
             <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
@@ -27,19 +37,30 @@ function recipeTemplate(recipe) {
     </section>`;
 }
 
-function tagsTemplate(tags) {
+
+// Generates the HTML for the list of tags
+function tagTemplate(tags) {
     return tags.map(tag => `<li>${tag}</li>`).join('');
 }
 
+
+// Generates the HTML for the star rating
 function ratingTemplate(rating) {
     let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
     for (let i = 1; i <= 5; i++) {
-        html += i <= rating ? `<span class="icon-star">⭐</span>` : `<span class="icon-star-empty">☆</span>`;
+        if (i <= rating) {
+            html += `\t<span aria-hidden="true" class="icon-star">⭐</span>\n`;
+        } else {
+            html += `\t<span aria-hidden="true" class="icon-star-empty">☆</span>\n`;
+        }
     }
     html += `</span>`;
     return html;
 }
 
+
+
+// Renders the provided recipes inside
 function renderRecipes(recipeList) {
     const outputElement = document.querySelector('.recipe-container');
     if (outputElement) {
@@ -48,29 +69,33 @@ function renderRecipes(recipeList) {
     }
 }
 
-// handleResize function
+
+// Shows/hides descriptions based on screen size
+
 function handleResize() {
-    const description = document.querySelectorAll('.recipe-description');
-    if (description) {
-        if (window.innerWidth >= 600) {
-            description.classList.remove('hide');
-        } else {
-            description.classList.add('hide');
-        }
-    }
+    document.querySelectorAll(".recipe-description").forEach(description => {
+        description.classList.toggle('hide', window.innerWidth < 600);
+    });
 }
 
+
+// Event Handlers
+
+// Runs on page load and displays a random recipe
 function init() {
-    const recipe = getRandomListEntry(recipes);
+    const recipe = getRandomRecipe(recipes);
     renderRecipes([recipe]);
 }
 
+// Handles search input and filters the recipes
 function searchHandler(event) {
     event.preventDefault();
     const query = document.getElementById('search-input').value.toLowerCase();
     renderRecipes(filterRecipes(query));
 }
 
+
+// Filters recipes based on user input
 function filterRecipes(query) {
     return recipes
         .filter(recipe => 
@@ -82,7 +107,7 @@ function filterRecipes(query) {
         .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-// Attach event listeners
+// Event listeners
 document.getElementById('search-form').addEventListener('submit', searchHandler);
 window.addEventListener("resize", handleResize);
 window.addEventListener("load", init);
