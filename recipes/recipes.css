@@ -201,11 +201,7 @@ footer a:hover {
     }
 
     #search-form {
-        width: 100%;
         max-width: 1400px;
-        margin: 0 auto 1.5rem auto;
-        padding: 0 1.4rem;
-        box-sizing: border-box;
+        margin: 0 auto 1.4rem auto;
     }
-
 }
