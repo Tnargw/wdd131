@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me – Grant Watson</title>
+  <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+  <div class="site-title">Grant Watson</div>
+  <p class="intro-text">Welcome to the about page!</p>
+
+  <header>
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logo-no-text.png" alt="Logo" class="logo" />
+      </a>
+    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-layout">
+      <img src="images/about-me-picture.jpg" alt="Grant Watson" class="about-photo" />
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm Grant Watson. I'm a passionate developer with experience in web,
+          mobile, and desktop applications. I enjoy solving real-world problems with
+          clean code and creative UI.
+        </p>
+        <p>
+          This portfolio showcases some of the projects I’ve worked on. You’ll find
+          games, tools, and experiments built using a variety of technologies like
+          Flutter, Python, C#, and more.
+        </p>
+      </div>
+    </section>
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out:</p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:tnargw@gmail.com">tnargw@gmail.com</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/tnargw" target="_blank">github.com/tnargw</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/grant-watson-/" target="_blank">linkedin.com/in/grant-watson-/</a></li>
+        </ul>
+      </section>
+      
+  </main>
+  
+
+  <button class="toggle-theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
