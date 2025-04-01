@@ -125,8 +125,8 @@ header,
     bottom: 1.5rem;
     right: 1.5rem;
     padding: 0.6rem 0.8rem;
-    background-color: var(--secondary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--text-light);
     border: none;
     border-radius: 10px;
     font-size: 1.2rem;
@@ -193,8 +193,8 @@ header,
   
   .tag {
     display: inline-block;
-    background-color: var(--secondary);
-    color: white;
+    background-color: var(--primary);  /* better contrast than secondary */
+    color: var(--text-light);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -303,8 +303,8 @@ header,
   }
   
   body.dark-mode .tag {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--accent2);  /* light background */
+    color: var(--text-dark);
   }
   
   body.dark-mode .github-link {
@@ -328,8 +328,8 @@ header,
   
   body.dark-mode .search-button,
   body.dark-mode .toggle-theme-btn {
-    background-color: var(--accent1);
-    color: white;
+    background-color: var(--accent2);
+    color: var(--text-dark);
   }
   
   body.dark-mode .search-button:hover,
