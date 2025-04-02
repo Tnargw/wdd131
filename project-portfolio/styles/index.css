@@ -169,6 +169,7 @@ header,
   .project-image {
     width: 100%;
     height: auto;
+    max-width: 600px;
     border-radius: 8px;
     margin-bottom: 0.5rem;
   }
