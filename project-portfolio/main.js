@@ -20,7 +20,7 @@ window.toggleTheme = function () {
 function projectTemplate(project, index) {
   return `
     <section class="project-card" data-index="${index}"> 
-      <img class="project-image" src="${project.image}" alt="Image of ${project.title}" loading="lazy" />
+      <img class="project-image" src="${project.image}" alt="Image of ${project.title}" />
       <div class="project-content">
         <h2 class="project-name">${project.title}</h2>
         <p class="project-description">${project.description}</p>
