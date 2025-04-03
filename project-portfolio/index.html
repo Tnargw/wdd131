@@ -1,55 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- social Media Meta tags -->
-        <meta property="og:title" content="Project Portfolio">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="A website showcasing different projects.">
-        <meta property="og:image" content="https://tnargw.github.io/wdd131/project-portfolio/images/logo.webp">
-        <meta property="og:url" content="https://tnargw.github.io/wdd131/project-portfolio/index.html">
-        <meta name="twitter:card" content="summary_large_image">
-        
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="module" src="main.js" defer></script>
-        <meta name="description" content="Grant Watson's developer portfolio featuring projects in Flutter, Python, C#, and more." />
-        <title>Grant Watson Portfolio</title>
-        <link rel="stylesheet" href="styles/index.css" />
-      </head>
-      <div id="projectModal" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times;</span>
-          <div id="modal-body"></div>
-        </div>
-      </div>      
-      <body>
-        <div class="site-title">
-          Grant Watson
-        </div>
-        <p class="intro-text">
-          Hi, my name is Grant. Welcome to my portfolio!
-        </p>  
-        <header>
-          <div class="nav-left">
-            <img src="images/logo-no-text.webp" alt="Grant Watson Logo" class="logo" />
-          </div>
-          <div class="nav-right">
-            <nav class="nav-links">
-              <a href="index.html">Home</a>
-              <a href="about.html">About Me</a>
-            </nav>            
-            <input type="text" id="search" class="search-input" placeholder="Search projects..." />
-            <button class="search-button">Search</button>
-          </div>
-        </header>
-        
-        <main>
-          <section class="project-container">
-          </section>
-        </main>
 
-        <button class="toggle-theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+<head>
+  <!-- social Media Meta tags -->
+  <meta property="og:title" content="Project Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A website showcasing different projects.">
+  <meta property="og:image" content="https://tnargw.github.io/wdd131/project-portfolio/images/logo.webp">
+  <meta property="og:url" content="https://tnargw.github.io/wdd131/project-portfolio/index.html">
+  <meta name="twitter:card" content="summary_large_image">
 
-      </body>
-      </html>
-      
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="main.js" defer></script>
+  <meta name="description"
+    content="Grant Watson's developer portfolio featuring projects in Flutter, Python, C#, and more." />
+  <title>Grant Watson Portfolio</title>
+  <link rel="stylesheet" href="styles/index.css" />
+
+</head>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<body>
+  <div class="site-title">
+    Grant Watson
+  </div>
+  <p class="intro-text">
+    Hi, my name is Grant. Welcome to my portfolio!
+  </p>
+  <header>
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logo-no-text.webp" alt="Logo" class="logo" />
+      </a>    </div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+      </nav>
+      <input type="text" id="search" class="search-input" placeholder="Search projects..." />
+      <button class="search-button">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-container">
+    </section>
+  </main>
+
+  <button class="toggle-theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© 2025 Grant Watson</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="mailto:tnargw@gmail.com">Email</a>
+        <a href="https://github.com/tnargw" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/grant-watson-/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

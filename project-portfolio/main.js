@@ -5,6 +5,19 @@ const searchInput = document.getElementById('search');
 const searchButton = document.querySelector('.search-button');
 const projectContainer = document.getElementById('project-container');
 
+searchButton.disabled = true;
+
+searchInput.addEventListener('input', () => {
+  searchButton.disabled = searchInput.value.trim() === "";
+});
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && searchInput.value.trim() !== "") {
+    searchButton.click(); // Triggers the same behavior as clicking the button
+  }
+});
+
+
 searchButton.addEventListener('click', () => {
     const value = searchInput.value.toLowerCase();
     const results = filterProjects(value);
@@ -45,10 +58,12 @@ function setupModal(projects) {
       <p>${project.description}</p>
       <p><strong>Tags:</strong> ${project.tags.join(', ')}</p>
       ${project.github ? `<p><a href="${project.github}" target="_blank" class="github-link">View on GitHub</a></p>` : ''}
+      ${project.details ? `<div class="project-details">${project.details}</div>` : ''}
     `;
     modal.style.display = 'block';
     requestAnimationFrame(() => modal.classList.add('show'));
   };
+  
 
   const closeModal = () => {
     modal.classList.remove('show');
