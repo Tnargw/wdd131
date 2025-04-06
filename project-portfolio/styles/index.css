@@ -98,7 +98,7 @@ header,
   }
   
   .nav-links a:hover {
-    background-color: var(--secondary); /* same as .search-button:hover */
+    background-color: var(--secondary);
     color: white;
   }
   
@@ -302,7 +302,7 @@ header,
   }
   
   body.dark-mode .nav-links a:hover {
-    background-color: var(--primary); /* same as .search-button:hover */
+    background-color: var(--primary);
     color: var(--text-light);
   }
   
@@ -314,7 +314,7 @@ header,
   }
   
   body.dark-mode .tag {
-    background-color: var(--accent2);  /* light background */
+    background-color: var(--accent2); 
     color: var(--text-dark);
   }
   
@@ -532,4 +532,19 @@ header,
       padding: 0 1rem;
     }
   }
+
+  @media (max-width: 600px) {
+    .search-input,
+    .search-button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 315px) {
+    .nav-links {
+      display: none;
+    }
+  }
+  
+  
   
